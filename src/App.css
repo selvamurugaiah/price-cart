@@ -1,13 +1,14 @@
 body{
-  background-image:linear-gradient(90deg,rgb(20, 43, 110),rgb(56, 151, 234))
+  background-image:linear-gradient(90deg,rgb(20, 43, 110),rgb(56, 151, 234));
+  
   
 
 }
 .card-list{
 display:flex;
-flex-direction: row;
+flex-wrap: wrap;
 justify-content: space-around;
-margin:50px
+margin:50px;
 }
 .card-body{
   background-color: white;
@@ -18,14 +19,13 @@ margin:50px
 
 
 .card-body:hover{
-  margin-top: 5px;
-  
+  margin-top: -.25rem;
+  margin-bottom: .25rem;
+  transition: all 0.3s
 
 }
 .card-body > button {
   background-color: #33AEFF;
-  padding-left: 30px;
-  padding-right: 30px;
   width: 100%;
   border-radius:30px;
   text-align: center;
@@ -63,3 +63,4 @@ span{
   font-size:20px
 
 }
+
