@@ -6,45 +6,72 @@ function App() {
     {
      plan : 'FREE',
      price : 0,
+
      specification: [
-       '✔ Single User',
-       '✔ 5GB Storage',
-       '✔ Unlimited Public Projects',
-       '✔ Community Access',
-       '✖ Unlimited Private Projects',
-       '✖ Dedicated Phone Support',
-       '✖ Free Subdomain',
-       '✖ Monthly Status Reports'
+      {
+        title:'✔ Single User',
+        title1:'✔ 5GB Storage',
+        title2:'✔ Unlimited Public Projects',
+        title3:'✔ Community Access',
+        
+      },
+      {
+        tit:'✖ Unlimited Private Projects',
+        tit1:'✖ Dedicated Phone Support',
+        tit2:'✖ Free Subdomain',
+        tit3: '✖ Monthly Status Reports',
+        ratio:0.4,
+      
+      }
+       
+       
      ]
     },
     {
       plan : 'PLUS',
       price : 9,
       specification: [
-        '✔ 5 Users',
-        '✔ 50GB Storage',
-        '✔ Unlimited Public Projects',
-        '✔ Community Access',
-        '✔ Unlimited Private Projects',
-        '✔ Dedicated Phone Support',
-        '✔ Free Subdomain',
-        '✖ Monthly Status Reports'
+
+        {
+          title:'✔ Single User',
+          title1:'✔ 50GB Storage',
+          title2:'✔ Unlimited Public Projects',
+          title3:'✔ Community Access',
+          title4:'✔ Unlimited Private Projects',
+          title5:'✔ Dedicated Phone Support',
+          title6:'✔ Free Subdomain',
+        
+        },
+      {
+        tit:'✖ Monthly Status Reports',
+        ratio:0.4,
+      }
+        
+        
       ]
      },
      {
       plan : 'PRO',
       price : 49,
       specification: [
-        '✔ Unlimited Users',
-        '✔ 150GB Storage',
-        '✔ Unlimited Public Projects',
-        '✔ Community Access',
-        '✔ Unlimited Private Projects',
-        '✔ Dedicated Phone Support',
-        '✔ Unlimited Free Subdomain',
-        '✔ Monthly Status Reports'
+
+       {
+
+
+        title:'✔ Unlimited Users',
+        title1:'✔ 150GB Storage',
+        title2:'✔ Unlimited Public Projects',
+        title3:'✔ Community Access',
+        title4:'✔ Unlimited Private Projects',
+        title5:  '✔ Unlimited Free Subdomain',
+        title6:'✔ Monthly Status Reports',
+        title7:'✔ Free Subdomain',
+      },
+    
+     
       ]
      }
+   
   ];
   return (
     <div className="card-list">
@@ -76,8 +103,25 @@ function CardDetails({specification}) {
   return(
     <div className="card-details">
 
-    {specification.map((element) => {
-        return <p>{element}</p>
+    {specification.map((prod,idx) => {
+        return (
+        <div>
+
+        <p>{prod.title}</p>
+        <p>{prod.title1}</p>
+        <p>{prod.title2}</p>
+        <p>{prod.title3}</p>
+        <p>{prod.title4}</p>
+        <p>{prod.title5}</p>
+        <p>{prod.title6}</p>
+        <p>{prod.title7}</p>
+        <p style={{opacity:prod.ratio}}>{prod.tit}</p>
+        <p style={{opacity:prod.ratio}}>{prod.tit1}</p>
+        <p style={{opacity:prod.ratio}}>{prod.tit2}</p>
+        <p style={{opacity:prod.ratio}}>{prod.tit3}</p>
+
+        </div>
+        )
        })}
 
     </div>
@@ -88,7 +132,10 @@ function CardDetails({specification}) {
 
 function Button() {
   return(
-    <button><h2>Button</h2></button>
+  <div>
+<button>Button</button>
+  </div>
+    
   );
 }
 
